@@ -1,9 +1,15 @@
-# Ignore ทุกอย่างใน root และ subfolders
-/*
+# ==== Global ignores (anywhere in the repo) ====
+# Python pickles
+*.pkl
+# CSV files
+*.csv
+# Text files
+*.txt
 
-# ยกเว้นโฟลเดอร์ทั้งหมด (เพื่อให้ Git เข้าไปดูข้างในได้)
-!*/
+# (Make sure Jupyter notebooks are still tracked)
+!*.ipynb
 
-# Ignore ทุกอย่างในโฟลเดอร์ แต่ยกเว้น .ipynb
-**/*
-!**/*.ipynb
+# ==== In any HW… folder ignore only .tar.gz and .txt ====
+# Matches e.g. HW1/, HW_A/, etc.
+**/HW*/**/*.tar.gz
+**/HW*/**/*.txt
